@@ -1,0 +1,41 @@
+---
+---
+<style>
+	h1 {
+		font-size: xx-large;
+		grid-area: header;
+		text-align: center;
+		padding: 5vh 0;
+	}
+
+	.description {
+		grid-area: description;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 5vw;
+		font-size: 18pt;
+		text-align: center;
+		width: 40vw;
+	}
+	.img {
+		width: 50vw;
+		grid-area: image;
+	}
+	.container {
+		height: 80vh;
+		display: grid;
+		grid-template-areas:
+		'header header'
+		'description image';
+		padding: 10vh 0vh;
+	}
+</style>
+<div class="container">
+    <h1>Menús Digitales: Tu carta a la vanguardia</h1>
+    <p class="description">
+        Crea, actualiza y administra tu menú digital en minutos, sin
+        necesidad de conocimientos técnicos.
+    </p>
+    <img src="./home-background.png" class="img" />
+</div>

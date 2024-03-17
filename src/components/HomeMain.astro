@@ -7,7 +7,6 @@
 		text-align: center;
 		padding: 5vh 0;
 	}
-
 	.description {
 		grid-area: description;
 		display: flex;
@@ -30,6 +29,21 @@
 		'description image';
 		padding: 10vh 0vh;
 	}
+  @media only screen and (max-width: 425px) {
+    .container {
+      grid-template-areas:
+      'header'
+		  'description'
+      'image';
+    }
+    .img {
+      width: 100vw;
+    }
+    .description {
+      width: 100vw;
+      font-size: 12pt;
+    }
+  }
 </style>
 <div class="container">
     <h1>Menús Digitales: Tu carta a la vanguardia</h1>

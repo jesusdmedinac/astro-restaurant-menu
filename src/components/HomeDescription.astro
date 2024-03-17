@@ -2,36 +2,34 @@
 
 ---
 <style>
-	h2 {
-        display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: x-large;
-        padding: 10vh 0;
-        grid-area: ask;
-        text-align: center;
-        background-color: red;
-	}
-    img {
-        width: 64vh;
-        grid-area: img;
-        background-color: green;
-    }
-    p {
-        font-size: large;
-        padding: 10vh 0;
-        grid-area: answer;
-        text-align: center;
-        background-color: blue;
-    }
-
+  h2 {
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    grid-area: ask;
+    text-align: center;
+  }
+  img {
+    width: 50vw;
+    grid-area: img;
+  }
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    grid-area: answer;
+    text-align: center;
+    width: 40vw;
+    padding: 0 5vw;
+  }
 	.container {
-		height: 80vh;
-		padding: 10vh 0;
-        display: grid;
-        grid-template-areas:
-        'ask ask'
-        'img answer';
+    display: grid;
+    grid-template-areas:
+    'ask ask'
+    'img answer';
 	}
 </style>
 <div class="container">
@@ -41,9 +39,11 @@
         personalizada?
     </h2>
     <img src="./menu.png">
-    <p>
+    <div class="description">
+      <p>
         ¡Conoce Menús Digitales, la solución SAAS que te permite crear,
         actualizar y administrar tu menú digital en minutos, sin necesidad
         de conocimientos técnicos!
-    </p>
+      </p>
+    </div>
 </div>

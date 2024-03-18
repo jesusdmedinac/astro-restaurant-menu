@@ -3,13 +3,13 @@
 ---
 <style>
   h2 {
-    padding: 5vh 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: x-large;
     grid-area: ask;
     text-align: center;
+    background-color: blueviolet;
   }
   img {
     width: 50vw;
@@ -30,7 +30,10 @@
     grid-template-areas:
     'ask ask'
     'img answer';
+    background-color: red;
 	}
+  @media only screen and (max-width: 425px) {
+  }
 </style>
 <div class="container">
     <h2>

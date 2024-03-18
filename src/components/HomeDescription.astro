@@ -1,52 +1,38 @@
 ---
 
 ---
-<style>
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    grid-area: ask;
-    text-align: center;
-    background-color: blueviolet;
-  }
-  img {
-    width: 50vw;
-    grid-area: img;
-  }
-  .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-    grid-area: answer;
-    text-align: center;
-    width: 40vw;
-    padding: 0 5vw;
-  }
-	.container {
-    display: grid;
-    grid-template-areas:
-    'ask ask'
-    'img answer';
-    background-color: red;
-	}
-  @media only screen and (max-width: 425px) {
-  }
-</style>
-<div class="container">
-    <h2>
-        ¿Cansado de imprimir menús costosos y actualizarlos constantemente?<br>
-        ¿Quieres ofrecer a tus clientes una experiencia moderna y
-        personalizada?
-    </h2>
-    <img src="./menu.png">
-    <div class="description">
-      <p>
-        ¡Conoce Menús Digitales, la solución SAAS que te permite crear,
-        actualizar y administrar tu menú digital en minutos, sin necesidad
-        de conocimientos técnicos!
-      </p>
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+  <h1 class="display-4 fw-bold text-body-emphasis">¿Cansado de imprimir menús costosos y actualizarlos constantemente?<br>
+    ¿Quieres ofrecer a tus clientes una experiencia moderna y
+    personalizada?</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">¡Conoce Menús Digitales, la solución SAAS que te permite crear, actualizar y administrar tu menú digital en minutos, sin necesidad de conocimientos técnicos!</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" hero-primary-button>Contactar</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" hero-secondary-button>Ver demo</button>
     </div>
+  </div>
+  <div class="overflow-hidden">
+    <div class="container px-5">
+      <img src="./menu.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+    </div>
+  </div>
 </div>
+<script>
+  // Import npm modules.
+  // Find our component DOM on the page.
+  const primaryButtons = document.querySelectorAll('[hero-primary-button]');
+  const secondaryButtons = document.querySelectorAll('[hero-secondary-button]');
+
+  // Add event listeners to fire confetti when a button is clicked.
+  primaryButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      window.open('/contact');
+    });
+  });
+  secondaryButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      window.open('/demo');
+    });
+  });
+</script>
